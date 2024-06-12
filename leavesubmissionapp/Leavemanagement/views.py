@@ -17,3 +17,10 @@ class LeaveSubmissionView(generics.CreateAPIView):
 class RetrieveLeaveDetailsView(generics.ListAPIView):
     queryset = LeaveApplication.objects.all()
     serializer_class = LeaveApplicationSerializer
+
+class RetrieveSingleLeaveDetailView(generics.ListAPIView):
+    serializer_class = LeaveApplicationSerializer
+
+    def get_queryset(self):
+        applicant_id = self.kwargs.get('applicant_id')
+        return LeaveApplication.objects.filter(applicant_id=applicant_id)
