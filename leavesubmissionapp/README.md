@@ -19,6 +19,11 @@ Test Cases are written on both apps , test cases for urls and views have been wr
 
 
 How to Use:
+
+command to start backend : python manage.py runserver
+command to start frontend : npm start
+command to run testcases : python manage.py test
+
 After runnign both the Django App and React App, 
 User is directed to the landing page which is the login page for EMPLOYEE,
 From their ,if the user is a manager, he can move to the manager login page else if the user wants to register , he can move to the signup part
