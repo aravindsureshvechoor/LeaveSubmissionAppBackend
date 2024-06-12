@@ -13,3 +13,8 @@ class LeaveApplicationSerializer(serializers.ModelSerializer):
 
     def get_total_leaves_by_applicant(self, obj):
         return LeaveApplication.objects.filter(applicant=obj.applicant).count()
+
+class LeaveApplicationUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LeaveApplication
+        fields = '__all__'

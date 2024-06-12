@@ -22,5 +22,5 @@ class LeaveApplication(models.Model):
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
 
     def __str__(self):
-        return f"{self.applicant.user_name} - {self.type_of_leave} from {self.startdate} to {self.enddate} ({self.status})"
+        return f"{self.applicant.user_name} - {self.type_of_leave} from {self.startdate} to {self.enddate} ({self.id})"
 
